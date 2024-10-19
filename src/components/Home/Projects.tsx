@@ -26,20 +26,22 @@ export const Projects = ({ projects }: ProjectsProps) => {
             key={name[locale] + index}
           >
             <Link className="hover:scale-110 transition-transform" href={url}>
-              <Image
-                src={image.url}
-                alt={image.alt[locale]}
-                width={400}
-                height={200}
-                className="rounded-2xl h-[16.75rem] mb-4"
-              />
+              <div className="relative">
+                <Image
+                  src={image.url}
+                  alt={image.alt[locale]}
+                  width={400}
+                  height={200}
+                  className="rounded-2xl h-[16.75rem] mb-4"
+                />
+                <div className="bg-galactic-purple rounded-full w-12 h-12 text-center flex justify-center items-center text-xl absolute bottom-[-1.75rem] -right-[1.25rem]">
+                  <span>{index + 1}</span>
+                </div>
+              </div>
             </Link>
             <div className="w-96 space-y-4">
               <p>{name[locale]}</p>
               <p>{description[locale]}</p>
-            </div>
-            <div className="bg-galactic-purple rounded-full w-12 h-12 text-center flex justify-center items-center text-xl absolute bottom-[16.25rem] -right-[1.25rem]">
-              <span>{index + 1}</span>
             </div>
           </li>
         ))}
