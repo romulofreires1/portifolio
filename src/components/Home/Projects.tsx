@@ -20,7 +20,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
       </h2>
 
       <ul className="flex flex-wrap gap-16 justify-center xl:justify-start">
-        {projects.map(({ name, image, url }, index) => (
+        {projects.map(({ name, description, image, url }, index) => (
           <li
             className="text-md relative hover:scale-110 transition-transform"
             key={name[locale] + index}
@@ -34,8 +34,11 @@ export const Projects = ({ projects }: ProjectsProps) => {
                 className="rounded-2xl h-[16.75rem] mb-4"
               />
             </Link>
-            <span>{name[locale]}</span>
-            <div className="bg-galactic-purple rounded-full w-12 h-12 text-center flex justify-center items-center text-xl absolute bottom-[1.25rem] -right-[1.25rem]">
+            <div className="w-96 space-y-4">
+              <p>{name[locale]}</p>
+              <p>{description[locale]}</p>
+            </div>
+            <div className="bg-galactic-purple rounded-full w-12 h-12 text-center flex justify-center items-center text-xl absolute bottom-[16.25rem] -right-[1.25rem]">
               <span>{index + 1}</span>
             </div>
           </li>

@@ -21,10 +21,7 @@ const Home = ({ home }: HomeProps) => {
     <>
       <Head>
         <title>Sobre mim | Rômulo</title>
-        <meta
-          name="description"
-          content={aboutMe.description[locale]}
-        />
+        <meta name="description" content={aboutMe.description[locale]} />
       </Head>
       <div className="py-12 px-6 md:px-32 space-y-10 md:space-y-28">
         <AboutMe aboutMe={aboutMe} />

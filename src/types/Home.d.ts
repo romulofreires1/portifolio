@@ -26,6 +26,7 @@ export interface AboutMe {
 
 export interface Project {
   name: Locales;
+  description: Locales;
   image: Image;
   url: string;
 }

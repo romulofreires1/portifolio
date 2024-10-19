@@ -21,7 +21,7 @@ const Contacts = ({ contacts }: ContactsProps) => {
         <title>{`${title} | Rômulo`}</title>
       </Head>
       <div className="mt-12 md:mt-24 space-y-8 px-6 md:space-y-16 md:px-32">
-        <Title text={title}/>
+        <Title text={title} />
         <ul className="table mx-auto space-y-6 md:space-y-8">
           {contacts.map((contact) => (
             <ContactItem key={contact.name} contact={contact} />
